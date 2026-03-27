@@ -568,11 +568,13 @@
     /* Hero mobile fix */
     .hero > div[style*="flex-direction:row"],
     .hero > div[style*="flex-direction: row"] { flex-direction: column !important; padding: 2rem 1.25rem !important; gap: 2rem !important; }
-    .hero div[style*="flex-shrink:0"] { display: none !important; }
+    .hero div[style*="flex-shrink:0"] { display: flex !important; flex-direction: row !important; gap: 8px !important; overflow-x: auto !important; width: 100% !important; padding-bottom: 8px !important; }
+    .hero div[style*="flex-shrink:0"] > div { width: 140px !important; min-width: 140px !important; flex-shrink: 0 !important; }
+    .hero div[style*="flex-shrink:0"] > div img { height: 100px !important; }
     .hero div[style*="flex:1"][style*="min-width:0"] { width: 100% !important; }
-    .hero h1 { font-size: 1.8rem !important; }
+    .hero h1 { font-size: 1.6rem !important; }
     .hero p[style*="Cormorant"] { font-size: 1rem !important; }
-    .nav-brand span { font-size: 0.75rem !important; }
+    .nav-brand span { font-size: 0.72rem !important; }
     .intro-strip .container { flex-direction: column !important; }
     section { padding: 3rem 1.25rem !important; }
     .services-grid { grid-template-columns: 1fr !important; }
