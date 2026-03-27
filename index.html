@@ -565,15 +565,12 @@
     .nav-links { display: none; }
     .intro-strip .container { flex-direction: column; }
     .intro-stats { justify-content: center; }
-    /* Hero mobile fix */
-    .hero > div[style*="flex-direction:row"],
-    .hero > div[style*="flex-direction: row"] { flex-direction: column !important; padding: 2rem 1.25rem !important; gap: 2rem !important; }
-    .hero div[style*="flex-shrink:0"] { display: flex !important; flex-direction: row !important; gap: 8px !important; overflow-x: auto !important; width: 100% !important; padding-bottom: 8px !important; }
-    .hero div[style*="flex-shrink:0"] > div { width: 140px !important; min-width: 140px !important; flex-shrink: 0 !important; }
-    .hero div[style*="flex-shrink:0"] > div img { height: 100px !important; }
-    .hero div[style*="flex:1"][style*="min-width:0"] { width: 100% !important; }
+    /* Hero mobile fix - works on Samsung and Apple */
+    .hero > div { flex-direction: column !important; padding: 2rem 1.25rem 1.5rem !important; gap: 1.5rem !important; align-items: stretch !important; }
+    .hero div[style*="flex-shrink:0"] { flex-shrink: unset !important; width: 100% !important; align-items: stretch !important; }
+    .hero div[style*="flex-shrink:0"] > div { width: 100% !important; max-width: 100% !important; }
+    .hero div[style*="flex-shrink:0"] > div img { height: 180px !important; }
     .hero h1 { font-size: 1.6rem !important; }
-    .hero p[style*="Cormorant"] { font-size: 1rem !important; }
     .nav-brand span { font-size: 0.72rem !important; }
     .intro-strip .container { flex-direction: column !important; }
     section { padding: 3rem 1.25rem !important; }
